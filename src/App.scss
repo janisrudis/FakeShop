@@ -1,0 +1,233 @@
+// Dark
+$D1: #24262d;
+$D2: #2a2d35;
+$D3: #2e3039;
+$D4: #3a3c45;
+$DAL: #f7af3e;
+$DAD: #de9536;
+$DW: white;
+
+// Light
+$L4: #bbbbbb;
+$L2: #cccccc;
+$L3: #dddddd;
+$L1: #eeeeee;
+$LA: #29a8ab;
+$LW: white;
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.light-mode {
+  background-color: transparent;
+  color: $D1;
+  transition: background-color 0.25s ease-out;
+}
+
+.light-mode html {
+  background-color: transparent;
+  color: $D1;
+  transition: background-color 0.25s ease-out;
+}
+
+.dark-mode {
+  background-color: $D3;
+  height: 100%;
+  width: 100%;
+}
+
+// .dark-mode html {
+//   background-color: #263859;
+// }
+
+.dark-product {
+  background-color: transparent;
+  color: white;
+}
+
+.drawer {
+  flex-shrink: 0;
+  width: 320;
+}
+
+.flip-card {
+  width: 18%;
+  min-width: 290px;
+  height: 500px;
+  perspective: 1000px;
+  margin: 1%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  font-size: 3vh;
+}
+
+.flip-card-back-dark {
+  background-color: $D4;
+  color: white;
+  transform: rotateY(180deg);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: center;
+}
+
+.flip-card-back-light {
+  background-color: $L1;
+  color: $D4;
+  transform: rotateY(180deg);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: center;
+}
+
+.flip-card-back-light p {
+  font-size: 2.5vh;
+}
+
+.flip-card-back-light h1 {
+  font-size: 5vh;
+}
+
+.flip-card-back-dark p {
+  font-size: 2.5vh;
+}
+
+.flip-card-back-dark h1 {
+  font-size: 5vh;
+}
+
+.flip-card-back-brand {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding-bottom: 85px;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  color: $L4;
+  opacity: 0.8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5vh;
+  font-weight: 900;
+}
+
+.flip-card-overlay {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  background-color: $D4;
+}
+
+.flip-card-overlay-dark {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  background-color: $D4;
+}
+
+.flip-card-overlay-light {
+  width: 100%;
+  height: 100%;
+  color: $D4;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  background-color: $L1;
+}
+
+.flip-card-picture {
+  width: 100%;
+  height: 100%;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position-y: 4vh, center;
+  background-position-x: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 2vh;
+}
+
+.button_D {
+  color: $DW !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+  padding: 20px;
+  border: 1px solid $DW !important;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+}
+
+.button_D:hover {
+  color: #ffffff !important;
+  background: $DAD;
+  border-color: $DAD !important;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+.button_L {
+  color: $D4!important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+  padding: 20px;
+  border: 1px solid $D4 !important;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+}
+
+
+.button_L:hover {
+  color: $L1 !important;
+  background: $DAD;
+  border-color: $DAD !important;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
